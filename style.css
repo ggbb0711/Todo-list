@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{font-family: 'Roboto', sans-serif;}
+body{
+    margin: 0;
+    min-height: 100vh;
+}
+input,button,.delete,label,.material-icons{
+    cursor: pointer;
+}
+.header{
+    background-color: rgba(9, 82, 218, 0.938);
+    height: 70px;
+    margin-top: 0;
+    color: white;
+}
+.todo-cards{
+    width: clamp(300px,50%,800px);
+    flex-direction: column;
+}
+.todo-card>.title input[type='text']{
+    width: 50%;
+    height: 50%;
+    font-size: 20px;
+    margin-top: 8px;
+    border: none;
+}
+.todo-card{
+    width: 100%;
+    margin:5px 0;
+}
+.title-wrapper{
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    left: -1px;
+    top: -1px;
+}
+.title>.title-wrapper:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.todo-card>.title{
+    border: solid rgba(24, 22, 22, 0.534) 2px;
+    padding: 10px;
+    cursor: pointer;
+    padding-left: 40px;
+}
+.title>.material-icons{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+    height: 60px;
+    z-index: 5;
+}
+.deadline{
+    position: absolute;
+    left: 10px;
+    top: 45px;
+    font-size: 15px;
+    color: rgb(238, 20, 20)
+}
+.steps{
+    border: solid rgba(24, 22, 22, 0.534) 1px;
+    border-top: none;
+    padding: 5px 25px;
+    height: 150px;
+    overflow: auto;
+    display: none;
+}
+.steps>.title:not(:first-child){
+    margin-top: 15px;
+}
+.steps input[type='text']{
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+}
+.make-todos-form{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+}
+.form{
+    background-color: white;
+    width: clamp(300px,50%,800px);
+    flex-direction: column;
+    position: fixed;
+    top: 20%;
+    left: 24%;
+    padding: 10px;
+}
+form{
+    width: 100%;
+}
+.create-step{
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.548);
+}
+.create-step:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.create-step>span{
+    background-color: gray;
+    height: 100%;
+    font-size: 20px;
+}
+.form>.delete{
+    position: absolute;
+    height:25px;
+    right: 2px;
+    top: 5px;
+}
+.priority-containers input[type='radio']{
+    margin-bottom: 4px;
+}
+.priority-wrap{
+    margin: 0 10px;
+}
+.business{
+    color: red;
+}
+.business+p{
+    color: red;
+}
+.new-steps{
+    max-height: 150px;
+    overflow: auto;
+}
+.new-step.flex{
+    justify-content: space-between;
+}
+.new-step.flex{
+    padding: 5px 25px;
+}
+.submit-button{
+    margin-left: 45%;
+}
+.new-todo{
+    background-color: gray;
+    border-radius: 50%;
+    padding: 14px;
+    position: fixed;
+    right: 15%;
+    bottom: 30px;
+    cursor: pointer;
+}
+.new-todo:hover{
+    background-color: rgba(128, 128, 128, 0.521);
+}
+input[type="date"]{
+    margin-left: 45%;
+}

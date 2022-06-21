@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utilities.css">
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <!--the form-->
+    <div class="make-todos-form">
+        <div class="form flex">
+            <p>Create todo</p>
+            <p class="delete flex">X</p>
+            <form action="/">
+                <div class="input-field">
+                    <label for="create-title">Title</label>
+                    <input type="text" id="create-title">
+                </div>
+                <div class="priority-containers flex">
+                    <div class="priority-wrap flex">
+                        <input type="radio" id="business-priority" name="priorities" value="business">
+                        <label for="business-priority">
+                            <div class="priority-container flex">
+                                <p class="material-icons business">radio_button_unchecked</p>
+                                <p>Business</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="priority-wrap flex">
+                        <input type="radio" id="personal-priority" name="priorities" value="personal" checked>
+                        <label for="personal-priority">
+                            <div class="priority-container flex">
+                                <p class="material-icons personal">radio_button_unchecked</p>
+                                <p>Personal</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <input type="date">
+                <div class="new-steps">
+                    <p>Create step</p>
+                </div>
+                <div class="create-step"><span>+</span></div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!--Header-->
+    <div class="header flex">
+        <div class="header-container">
+            <h1>To do list</h1>
+        </div>
+    </div>
+    <!--To dos-->
+    <div class="todos flex">
+        <div class="todo-cards flex">
+        </div>
+    </div>
+    <div class="new-todo"><span>+</span></div>
+</body>
+</html>

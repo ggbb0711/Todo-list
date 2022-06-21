@@ -1,0 +1,74 @@
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*the checkmark*/
+.check{
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+.container-checkmark{
+    cursor: pointer;
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 25px;
+}
+.icons .check:checked+.checkmark{
+    background-color: green;
+}
+.checkmark{
+    height: calc(100% - 4px);
+    border: solid rgba(24, 22, 22, 0.534) 2px;
+    width: calc(25px - 4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.checkmark::after{
+    content: "";
+    border: white solid;
+    border-width: 0 5px 5px 0 ;
+    position: relative;
+    width: 5px;
+    height: 10px;
+    transform: rotate(45deg);
+    display: none;
+}
+.check:checked+.checkmark::after{
+    display: block;
+}
+/*delete button*/
+.delete{
+    background-color: rgb(241, 13, 13);
+    color: rgba(255,255,255,0.8);
+    height: 100%;
+    width: 25px;
+    text-align: center;
+    margin-left: none;
+}
+.delete:hover{
+    background-color: rgba(161, 7, 7, 0.63);
+}
+/*others*/
+.edit{
+    font-size: 14px;
+}
+input[type='text']{
+    width: 90%;
+    border: none;
+    border-bottom: solid black 1px;
+}
+input[type='text']:focus{
+    outline: none;
+}
+.open{
+    display: block;
+}
+.finished{
+    text-decoration: line-through;
+}
